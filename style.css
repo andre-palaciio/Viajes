@@ -17,11 +17,12 @@ body{
 }
 .title-container {
   position: fixed;
-  top: 20px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
-  opacity: 1; /* Oculta el contenedor del título por defecto */
-  transition: opacity 0.3s ease; /* Agrega una transición suave para la aparición/desaparición */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 9999; /* Asegura que el título esté en el frente de otros elementos */
 }
 
 .title {
@@ -33,10 +34,6 @@ body{
   letter-spacing: 2px;
   white-space: nowrap;
   overflow: hidden;
-  position: fixed; 
-  top: 5px; 
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 @media (max-width: 768px) {
